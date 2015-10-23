@@ -7,7 +7,7 @@ dev_db:
     service: mongodb
   volumes:
     - ./data/dev_db:/data/db
-  command: mongod --dbpath /data/db
+  command: mongod --port 27777 --dbpath /data/db
   ports:
     - '127.0.0.1:27777:27777'
 
@@ -16,6 +16,6 @@ production_db:
     service: mongodb
   volumes:
     - ./data/production:/data/db
-  command: mongod --auth --dbpath /data/db
+  command: mongod --auth --port 28888 --quiet --dbpath /data/db
   ports:
     - '127.0.0.1:28888:28888'
