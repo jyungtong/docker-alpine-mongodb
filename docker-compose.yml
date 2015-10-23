@@ -1,0 +1,17 @@
+mongodb:
+  build: .
+  dockerfile: ./Dockerfile.mongodb
+
+dev_db:
+  extends:
+    service: mongodb
+  volumes:
+    - ./data/dev_db:/data/db
+  command: mongo --dbpath /data/db
+
+production_db:
+  extends:
+    service: mongodb
+  volumes:
+    - ./data/production:/data/db
+  command: mongo --auth --dbpath /data/db

@@ -1,7 +1,7 @@
 FROM alpine:edge
 MAINTAINER Tux Tong <huntthetux@gmail.com>
 
-ENV MONGO_VERSION 3.0.6
+ENV MONGO_VERSION 3.0.7
 
 RUN apk --update add curl libgcc libstdc++ && \
     cd /tmp && \

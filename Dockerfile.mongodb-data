@@ -1,5 +1,0 @@
-FROM busybox
-MAINTAINER Tux Tong <huntthetux@gmail.com>
-
-# Data only container for mongodb database
-VOLUME /data/db
